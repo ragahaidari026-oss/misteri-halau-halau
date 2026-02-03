@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Sebelum Memulai</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Gunung Halau-halau</h2>
+
+<p>
+Sebelum semuanya dimulai,  
+sebutkan namamu.
+</p>
+
+<input
+  type="text"
+  id="username"
+  placeholder="Nama..."
+  style="background:#000;color:#00ff9c;border:1px solid #00ff9c;padding:8px;font-family:monospace;"
+>
+
+<br><br>
+
+<button onclick="mulai()">Mulai</button>
+
+<p id="peringatan" style="color:#ff4d4d;margin-top:20px;"></p>
+
+<script>
+  function mulai() {
+    const nama = document.getElementById("username").value.trim();
+    const peringatan = document.getElementById("peringatan");
+
+    if (nama === "") {
+      peringatan.innerText = "Nama itu diperlukan.";
+      return;
+    }
+
+    localStorage.setItem("username", nama);
+    window.location.href = "index.html";
+  }
+</script>
+
+</body>
+</html>
