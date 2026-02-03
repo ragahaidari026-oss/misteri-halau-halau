@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Halaman Mansion</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Halaman Mansion</h2>
+
+<p>
+Kamu mencoba untuk mengecek di sekitaran mansion tersebut.   <br>    
+    Yang kamu temukan hanyalah patung gnome yang telah hancur, daun kering yang berserakan, dan garpu tanah. <br>
+    Namun, ada sesuatu yang membuat kamu cukup merinding. <br> Di suatu dinding mansion tersebut terdapat tulisan:
+    </p> 
+
+    <div class="surat">
+  <p>
+  “<b style="color: red;">SE9ER4 P3RG1 D4RI S1NI!!!</b>”
+  </p>
+  <p style="text-align:right;">— ∞</p>
+</div>
+
+<p><b>Pilih langkahmu:</b></p>
+
+<script>
+  localStorage.setItem("pernahLewatHalaman", "true");
+</script>
+
+
+<button onclick="pilihJalur('pintu', 'halaman')">
+Masuk lewat pintu utama
+</button>
+
+<button onclick="pilihJalur('lari')">
+Kabur
+</button>
+
+<script src="main.js"></script>
+</body>
+</html>
