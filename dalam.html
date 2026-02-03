@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Halaman Mansion</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Di Dalam Mansion</h2>
+
+<p>
+Ketika pintu itu terbuka, yang kamu lihat pertama kali adalah meja makan besar yang mewah beserta makanannya.   <br>    
+    Yang kamu temukan hanyalah patung gnome yang telah hancur, daun kering yang berserakan, dan garpu tanah. <br>
+    Namun, ada sesuatu yang membuat kamu cukup merinding. <br> Di suatu dinding mansion tersebut terdapat tulisan:
+    </p> 
+
+<p><b>Pilih langkahmu:</b></p>
+
+<script>
+  localStorage.setItem("pernahLewatHalaman", "true");
+</script>
+
+
+<button onclick="pilihJalur('pintu', 'halaman')">
+Masuk lewat pintu utama
+</button>
+
+<button onclick="pilihJalur('lari')">
+Kabur
+</button>
+
+<script src="main.js"></script>
+</body>
+</html>
