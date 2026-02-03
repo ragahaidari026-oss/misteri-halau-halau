@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Misteri Halau-halau</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h2>Surat</h2>
+
+<div class="surat">
+  <p>
+  “Dari arah timur.  
+  Pergilah ke kedalaman hutan.  
+  Mereka menunggumu.”
+  </p>
+  <p id="narasi"></p>
+
+<script>
+  const nama = localStorage.getItem("username") || "kamu";
+
+  document.getElementById("narasi").innerText =
+    "Tidak ada tempat untuk bersembunyi. " + nama;
+</script>
+  
+  <p style="text-align:right;">— ∞</p>
+</div>
+
+<p>
+    Kamu memutuskan untuk:
+</p>
+
+<button onclick="pilihJalur('gerbang')">
+Pergi ke arah timur
+</button>
+
+
+<script src="main.js"></script>
+</body>
+</html>
