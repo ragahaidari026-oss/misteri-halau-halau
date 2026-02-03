@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Pintu Utama</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Pintu Utama</h2>
+
+<p id="pesanTambahan"></p>
+
+<div id="passwordArea" style="margin-top:30px;">
+  <p>
+    Di tengah pintu, terdapat ukiran samar.<br>
+  <input 
+    type="password" 
+    id="password" 
+    placeholder="Masukkan sandi..." 
+    style="background:#000;color:#00ff9c;border:1px solid #00ff9c;padding:8px;font-family:monospace;"
+  >
+
+  <br><br>
+
+  <button onclick="cekPassword()">Sentuh Pintu</button>
+
+  <p id="feedback" style="margin-top:20px;color:#ff4d4d;"></p>
+</div>
+
+<div id="opsiGagal" style="display:none; margin-top:30px;">
+  <button onclick="pilihJalur('halaman', 'gerbang')">
+    Mengelilingi mansion
+  </button>
+</div>
+
+
+<script src="main.js"></script>
+
+<script>
+  localStorage.removeItem("asalMasuk");
+
+  const PASSWORD_BENAR = "943141";
+
+  function cekPassword() {
+    const input = document.getElementById("password").value.toUpperCase();
+    const feedback = document.getElementById("feedback");
+    const opsiGagal = document.getElementById("opsiGagal");
+
+    if (input === PASSWORD_BENAR) {
+      feedback.style.color = "#00ff9c";
+      feedback.innerText = "Pintu bergetar pelan... lalu terbuka.";
+
+      setTimeout(() => {
+        window.location.href = "dalam.html";
+      }, 1500);
+
+    } else {
+      feedback.style.color = "#ff4d4d";
+      feedback.innerText =
+        "Ukiran di pintu meredup.\nSepertinya kamu ditolak.";
+
+      // munculin opsi muter mansion
+      opsiGagal.style.display = "block";
+    }
+  }
+</script>
+
+
+</body>
+</html>
